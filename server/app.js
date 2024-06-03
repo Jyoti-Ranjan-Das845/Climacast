@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 import express from 'express';
 const app = express();
 import mongoose from 'mongoose';
@@ -29,7 +33,7 @@ async function main() {
 main();
 
 const sessionOptions = {
-  secret: 'hiddenemailkey',
+  secret: `${process.env.SECRET}`,
   resave: false,
   saveUninitialized: true, 
   cookie: {

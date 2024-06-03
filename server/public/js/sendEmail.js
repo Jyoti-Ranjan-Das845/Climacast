@@ -11,7 +11,7 @@ const sendEmail = async (notif, to, subject, text, link) => {
 			secure: true,
 			auth: {
 				user: 'jyoti.r.das845@gmail.com',
-				pass: 'vdyi deih fupp qxgj',
+				pass: `${process.env.APP_PASS}`,
 			},
 		});
 
